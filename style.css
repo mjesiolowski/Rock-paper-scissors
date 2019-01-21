@@ -85,6 +85,16 @@ div.results button:hover {
    color: white;
 }
 
+div.results button.active {
+   background-color: #CCC;
+   border: 3px solid #CCC;
+   color: #E1E1E1
+}
+
+div.results button.active:hover {
+   transform: scale(1);
+}
+
 /* STATISTICS */
 div.statistics h2 {
    margin-bottom: 2vh;
