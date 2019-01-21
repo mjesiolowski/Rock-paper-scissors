@@ -1,0 +1,123 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-image: url(forest.jpg);
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+}
+
+h1,
+div.results h2,
+div.statistics h2,
+div.statistics p {
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h1 {
+   text-align: center;
+   color: #fff;
+   padding: 3vh 5vh;
+   font-size: 65px;
+}
+
+/* IMAGES */
+
+div.container {
+   font-family: 'Source Sans Pro', sans-serif;
+   max-width: 1280px;
+   margin: 0 auto;
+}
+
+div.images {
+   display: flex;
+   justify-content: space-around;
+}
+
+div.images img {
+   width: 20%;
+   height: 20%;
+   border: 3px solid rgb(25, 24, 14);
+   border-radius: 50%;
+   transition: .5s;
+}
+
+div.images img:hover {
+   transform: scale(1.1);
+   cursor: pointer;
+   border: 3px solid rgb(61, 31, 43)
+}
+
+/* RESULTS */
+
+div.results,
+div.statistics {
+   text-align: center;
+   color: #fff;
+   padding: 2vh 0;
+   font-size: 25px;
+}
+
+div.results h2 {
+   margin: 2vh 0;
+   transition: .4s;
+}
+
+div.results button {
+   display: block;
+   font-size: 40px;
+   line-height: 60px;
+   background-color: #fff;
+   padding: 0 5vh;
+   margin: 0 auto;
+   border: 3px solid rgb(25, 24, 14);
+   transition: .3s;
+}
+
+div.results button:hover {
+   transform: scale(1.05);
+   cursor: pointer;
+   background-color: rgb(61, 31, 43);
+   color: white;
+}
+
+/* STATISTICS */
+div.statistics h2 {
+   margin-bottom: 2vh;
+}
+
+div.statistics p {
+   margin: 1vh 0;
+}
+
+
+@media (max-width: 1025px) {
+   h1 {
+      padding: 2vh;
+      font-size: 50px;
+   }
+
+   div.images img {
+      width: 17%;
+      height: 17%;
+
+   }
+}
+
+@media (max-width: 414px) {
+   div.images img {
+      width: 27%;
+      height: 27%;
+
+   }
+}
+
+@media (max-width: 350px) {
+   h1 {
+      font-size: 45px;
+   }
+}
