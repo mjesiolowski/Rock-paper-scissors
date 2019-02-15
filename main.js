@@ -24,9 +24,7 @@ function playerChoice() {
          images.forEach(image => {
             image.style.transform = ""
          })
-         console.log(e.target.className);
          playerChoiceSpan.textContent = e.target.className;
-         h2.style.fontSize = "45px"
          AIChoiceSpan.textContent = ""
          image.style.transform = "scale(1.2)"
       })
