@@ -22,8 +22,9 @@ div.statistics p {
 h1 {
    text-align: center;
    color: #fff;
-   padding: 3vh 5vh;
+   margin: 3vh 5vh 0 3vh;
    font-size: 65px;
+   height: 17vh;
 }
 
 /* IMAGES */
@@ -111,10 +112,9 @@ div.statistics p {
 }
 
 
-@media (max-width: 1025px) {
+@media (max-width: 850px) {
    h1 {
-      padding: 2vh;
-      font-size: 50px;
+      font-size: 40px;
    }
 
    div.images img {
@@ -131,9 +131,9 @@ div.statistics p {
    }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 370px) {
    h1 {
-      font-size: 45px;
+      font-size: 32px;
    }
 
    div.results h2 {
