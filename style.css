@@ -9,7 +9,6 @@ body {
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
-   height: 100vh;
 }
 
 h1,
@@ -60,7 +59,7 @@ div.results,
 div.statistics {
    text-align: center;
    color: #fff;
-   padding: 2vh 0;
+   padding: 1vh 0;
    font-size: 25px;
 }
 
