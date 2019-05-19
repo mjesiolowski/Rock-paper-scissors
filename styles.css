@@ -6,7 +6,7 @@
 }
 
 body {
-   background-image: url(forest.jpg);
+   background-image: url('./content/forest.jpg');
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
@@ -62,11 +62,6 @@ body {
    padding: 1vh 0;
    font-size: 25px;
 }
-
-/* .resultHeader {
-   margin: 2vh 0;
-   transition: .4s;
-} */
 
 .computerChoiceHeader,
 .AIChoiceHeader {
