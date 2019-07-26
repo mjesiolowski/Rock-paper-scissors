@@ -7,8 +7,8 @@ const app = {
       this.images = [...document.querySelectorAll(".images img")]
 
       // SPANS
-      this.playerChoiceSpan = document.querySelector(".playerChoice")
-      this.AIChoiceSpan = document.querySelector(".computerChoice")
+      this.playerChoice = document.querySelector(".playerChoice")
+      this.AIChoice = document.querySelector(".computerChoice")
       this.games = document.querySelector(".games")
       this.wins = document.querySelector(".wins")
       this.draws = document.querySelector(".draws")
@@ -16,40 +16,39 @@ const app = {
 
       this.button = document.querySelector("button")
       this.title = document.querySelector(".title")
-      this.h2 = document.querySelector(".yourChoice")
 
       this.button.addEventListener("click", () => this.startGame(this))
 
-      this.playerChoice()
+      this.handlePlayerChoice()
 
 
    },
 
-   playerChoice() {
+   handlePlayerChoice() {
       this.images.forEach((image => {
          image.addEventListener("click", e => {
             this.images.forEach(image => {
                image.style.transform = ""
             })
-            this.playerChoiceSpan.textContent = e.target.dataset.type;
-            this.AIChoiceSpan.textContent = ""
+            this.playerChoice.textContent = e.target.dataset.type;
+            this.AIChoice.textContent = ""
             image.style.transform = "scale(1.2)"
          })
       }))
    },
 
-   AIChoice() {
-      this.AIChoiceSpan.textContent = this.images[Math.floor(Math.random() * this.images.length)].dataset.type
+   handleAIChoice() {
+      this.AIChoice.textContent = this.images[Math.floor(Math.random() * this.images.length)].dataset.type
    },
 
    startGame() {
-      if (!this.playerChoiceSpan.textContent)
+      if (!this.playerChoice.textContent)
          return alert("What's your choice?")
-      this.AIChoice()
-      if (this.playerChoiceSpan.textContent === this.AIChoiceSpan.textContent) {
+      this.handleAIChoice()
+      if (this.playerChoice.textContent === this.AIChoice.textContent) {
          this.title.textContent = "DRAW!"
          this.draws.textContent++
-      } else if (this.playerChoiceSpan.textContent === "paper" && this.AIChoiceSpan.textContent === "rock" || this.playerChoiceSpan.textContent === "rock" && this.AIChoiceSpan.textContent === "scissors" || this.playerChoiceSpan.textContent === "scissors" && this.AIChoiceSpan.textContent === "paper") {
+      } else if (this.playerChoice.textContent === "paper" && this.AIChoice.textContent === "rock" || this.playerChoice.textContent === "rock" && this.AIChoice.textContent === "scissors" || this.playerChoice.textContent === "scissors" && this.AIChoice.textContent === "paper") {
          this.title.textContent = "WIN! :D"
          this.wins.textContent++
       } else {
@@ -62,7 +61,7 @@ const app = {
       this.button.setAttribute("disabled", "true");
       setTimeout(() => {
          this.title.textContent = "What's your choice?";
-         this.AIChoiceSpan.textContent = "";
+         this.AIChoice.textContent = "";
          this.button.removeAttribute("disabled");
       }, 1500)
    }
