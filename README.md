@@ -1,7 +1,7 @@
 # Rock-Paper-Scissors
 
 ## website
-https://mjesiolowski.github.io/rockPaperScissors/
+https://www.mjesiolowski.pl/projects/rock-paper-scissors/
 
 ## info
 This project shows how to use basics of JavaScript to create a simple point-and-click game by interacting with document object model. To make the game efficient and simple I divided the code logic into two main parts: the player choice and the computer choice. The core of the logic is based on if statements, loops and setTimeout callback. The data is kept in local storage.
