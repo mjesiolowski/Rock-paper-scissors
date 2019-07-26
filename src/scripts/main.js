@@ -31,7 +31,7 @@ const app = {
             this.images.forEach(image => {
                image.style.transform = ""
             })
-            this.playerChoiceSpan.textContent = e.target.className;
+            this.playerChoiceSpan.textContent = e.target.dataset.type;
             this.AIChoiceSpan.textContent = ""
             image.style.transform = "scale(1.2)"
          })
@@ -39,7 +39,7 @@ const app = {
    },
 
    AIChoice() {
-      this.AIChoiceSpan.textContent = this.images[Math.floor(Math.random() * this.images.length)].className
+      this.AIChoiceSpan.textContent = this.images[Math.floor(Math.random() * this.images.length)].dataset.type
    },
 
    startGame() {
@@ -60,12 +60,10 @@ const app = {
       this.games.textContent++
 
       this.button.setAttribute("disabled", "true");
-      this.button.classList.add("active")
       setTimeout(() => {
          this.title.textContent = "What's your choice?";
          this.AIChoiceSpan.textContent = "";
          this.button.removeAttribute("disabled");
-         this.button.classList.remove("active")
       }, 1500)
    }
 }

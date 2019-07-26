@@ -1,0 +1,29 @@
+.title {
+  color: white;
+  font-size: $font-size-xl;
+  margin: $s-size 0;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: $font-size-xxl;
+    margin: $l-size 0;
+  }
+}
+
+.subtitle {
+  @extend .title;
+  font-size: $font-size-xl;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: $font-size-button;
+  }
+}
+
+.text {
+  @extend .title;
+  font-size: $font-size-m;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: $font-size-l;
+  }
+}

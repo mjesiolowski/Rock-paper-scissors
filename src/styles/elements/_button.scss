@@ -1,0 +1,27 @@
+.button {
+  background-color: $white;
+  border: 2px solid $dark;
+  border-radius: 5px;
+  display: block;
+  font-size: $font-size-button;
+  padding: $s-size $l-size;
+  margin: $xs-size auto;
+  transition: .3s;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: $font-size-xxl;
+  }
+
+  &:hover {
+    background-color: $brown;
+    color: white;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: $white;
+    border: 2px solid darken($white, 25%);
+    color: darken($white, 25%);
+    cursor: auto;
+  }
+}

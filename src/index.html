@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="description" content="Rock-paper-scissors game based on vanilla JS.">
    <title>Rock Paper Scissors</title>
    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
    <link rel="stylesheet" href="styles/styles.bundle.css">
@@ -12,26 +13,28 @@
 
 <body>
    <div class="container">
-      <h1 class='title'>What's your choice?</h1>
-      <div class="images">
-         <img src="images/paper.png" alt="paper" class="paper">
-         <img src="images/rock.png" alt="rock" class="rock">
-         <img src="images/scissors.png" alt="scissors" class="scissors">
-      </div>
+      <section class="images">
+         <h1 class='title'>What's your choice?</h1>
+         <div class="images__wrapper">
+            <img src="images/paper.png" alt="paper" class="images__img" data-type="paper">
+            <img src="images/rock.png" alt="rock" class="images__img" data-type="rock">
+            <img src="images/scissors.png" alt="scissors" class="images__img" data-type="scissors">
+         </div>
+      </section>
 
-      <div class="results">
-         <h2 class="yourChoiceHeader">Your choice: <span class="playerChoice"></span></h2>
-         <h2 class='AIChoiceHeader'>AI choice: <span class="computerChoice"></span></h2>
-         <button class='playBtn'>PLAY!</button>
-      </div>
+      <section class="results">
+         <h2 class="yourChoiceHeader subtitle">Your choice: <span class="playerChoice"></span></h2>
+         <h2 class='AIChoiceHeader subtitle'>AI choice: <span class="computerChoice"></span></h2>
+         <button class='button playBtn'>PLAY!</button>
+      </section>
 
-      <div class="statistics">
-         <h2 class="statsHeader">Your statistics</h2>
+      <section class="statistics">
+         <h2 class="statsHeader subtitle">Your statistics</h2>
          <p class='text'>Games: <span class="games">0</span></p>
          <p class='text'>Wins: <span class="wins">0</span></p>
          <p class='text'>Draws: <span class="draws">0</span></p>
          <p class='text'>Losses: <span class="losses">0</span></p>
-      </div>
+      </section>
    </div>
    <script src="scripts/main.bundle.js"></script>
 </body>

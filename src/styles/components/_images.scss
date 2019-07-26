@@ -1,0 +1,31 @@
+.images {
+  @include flexbox(center, center);
+}
+
+.images__wrapper {
+  @include flexbox(center, space-around);
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+}
+
+.images__img {
+  border: 1px solid $dark;
+  border-radius: 50%;
+  min-width: 10rem;
+  transition: .5s;
+  width: 35%;
+
+  @media (min-width: $tablet-breakpoint) {
+    width: 30%;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 20rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 3px solid $brown;
+    transform: scale(1.1);
+  }
+}
