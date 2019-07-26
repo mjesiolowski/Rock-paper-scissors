@@ -7,14 +7,15 @@
   @include flexbox(center, space-around);
   flex-basis: 100%;
   flex-wrap: nowrap;
+  margin: 0 $s-size;
 }
 
 .images__img {
   border: 1px solid $dark;
   border-radius: 50%;
-  min-width: 10rem;
+  min-width: 8rem;
   transition: .5s;
-  width: 35%;
+  width: 30%;
 
   @media (min-width: $tablet-breakpoint) {
     width: 30%;
